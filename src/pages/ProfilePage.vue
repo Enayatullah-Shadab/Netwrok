@@ -9,7 +9,10 @@ export default {
   name: 'Profile',
   setup() {
     return {
-
+      Acount: {
+        type: Object,
+        required: true
+      }
     }
   }
 }
