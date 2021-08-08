@@ -10,7 +10,8 @@
 import { computed, onMounted } from '@vue/runtime-core'
 import { AppState } from '../AppState'
 import Pop from '../utils/Notifier'
-import { profileService } from '../services/ProfilesService'
+import { profileService } from '../services/ProfileService'
+
 export default {
   name: 'Home',
   setup() {
