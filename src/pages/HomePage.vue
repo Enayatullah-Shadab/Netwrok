@@ -2,7 +2,7 @@
   <div class="home container">
     <div class="d-flex flex-column align-items-center">
       <h3 class="bg-primary text-light p-2 rounded d-flex">
-          <span class="text-center text-light m-2 p-1">Post will come here</span>
+        <span class="text-center text-light m-2 p-1">Post will come here</span>
       </h3>
     </div>
   </div>
@@ -15,7 +15,7 @@ import Pop from '../utils/Notifier'
 import { profileService } from '../services/ProfileService'
 
 export default {
-  name: 'Home',
+  name: 'Login',
   setup() {
     onMounted(async() => {
       try {
