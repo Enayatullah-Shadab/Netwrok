@@ -1,12 +1,13 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-rg navbar-dark bg-dark mr-5">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
+      <div class="myPro d-flex flex-row vw-100 ">
         <img
-          alt="logo"
-          src="../assets/img/cw-logo.png"
+          alt=":)"
+          src="../assets/img/sha1.png"
           height="45"
         />
+        <h5>Welcome to Shadab Network</h5>
       </div>
     </router-link>
     <button
@@ -28,8 +29,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'About' }" class="nav-link">
-            About
+          <router-link :to="{ name: 'Profile' }" class="nav-link">
+            Profile
           </router-link>
         </li>
       </ul>
@@ -122,5 +123,11 @@ a:hover {
 }
 .nav-item .nav-link.router-link-exact-active{
   color: var(--primary);
+}
+img{
+  border-radius: 50%;
+}
+.myPro{
+border-radius: 15px;
 }
 </style>
