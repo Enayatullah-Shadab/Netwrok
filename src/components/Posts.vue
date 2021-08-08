@@ -32,3 +32,29 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+import { computed } from '@vue/runtime-core'
+import { AppState } from '../AppState'
+
+export default {
+  name: 'Login',
+  setup() {
+    return {
+      account: computed(() => AppState.account)
+    }
+  }
+}
+</script>
+<style lang='scss' scoped>
+.cursor{
+    cursor: pointer;
+}
+.round-border{
+    border-radius: 50%;
+    border: 2px solid darkblue;
+}
+.profile-img{
+    width: 70%;
+}
+
+</style>
