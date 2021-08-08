@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import { profileService } from '../services/ProfileService'
+// import { profileService } from '../services/ProfileService'
 
 export default {
   name: 'Home',
   setup() {
-    profileService.getPostByProfile('id')
+    // profileService.getPostByProfile('id')
   }
 }
 </script>
