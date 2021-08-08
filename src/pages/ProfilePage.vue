@@ -6,6 +6,11 @@
 
 <script>
 export default {
-  name: 'ProfilePage'
+  name: 'Profile',
+  setup() {
+    return {
+
+    }
+  }
 }
 </script>

@@ -9,21 +9,21 @@
 </template>
 
 <script>
-import { computed, onMounted } from '@vue/runtime-core'
+import { computed } from '@vue/runtime-core'
 import { AppState } from '../AppState'
-import Pop from '../utils/Notifier'
-import { profileService } from '../services/ProfileService'
+// import Pop from '../utils/Notifier'
+// import { profileService } from '../services/ProfileService'
 
 export default {
-  name: 'Login',
+  name: 'Home',
   setup() {
-    onMounted(async() => {
-      try {
-        await profileService.getAll()
-      } catch (error) {
-        Pop.toast(error, 'error')
-      }
-    })
+    // onMounted(async() => {
+    //   try {
+    //     await profileService.getAll()
+    //   } catch (error) {
+    //     Pop.toast(error, 'error')
+    //   }
+    // })
 
     return {
       profile: computed(() => AppState.profile)

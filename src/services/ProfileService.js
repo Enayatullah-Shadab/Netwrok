@@ -3,18 +3,18 @@ import { api } from './AxiosService'
 
 class ProfileService {
   async getProfileBySearch(query = {}) {
-    const res = await api.get('/api/profile')
+    const res = await api.get(`/api/profiles?query=${query}`)
     AppState.profile = res.data
   }
 
   async getProfileById(id) {
-    const res = await api.get('/api/profile/id')
+    const res = await api.get(`/api/profile/${id}`)
     AppState.profile = res.data
   }
 
   async getPostsByProfile(id) {
-    // this.getPostsByProfile(id)
-    const res = await api.get('/api/profile/id/posts')
+    this.getPostsByProfile(id)
+    const res = await api.get(`/api/profiles/${id}/posts`)
     AppState.profile = res.data
   }
 }
