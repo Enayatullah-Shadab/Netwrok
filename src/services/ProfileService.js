@@ -13,7 +13,7 @@ class ProfileService {
   }
 
   async getPostsByProfile(id) {
-    this.getPostsByProfile(id)
+    // this.getPostsByProfile(id)
     const res = await api.get('/api/profile/id/posts')
     AppState.profile = res.data
   }
