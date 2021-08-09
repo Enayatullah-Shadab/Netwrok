@@ -1,11 +1,17 @@
 <template>
-  <div class="profile m-1 p-1">
-    <img class="rounded-circle" :src="account.picture" alt="profile image">
+  <div>
+    <img class="btn" :src="account.picture" alt=":)">
     <h5>{{ account.class }}</h5>
-    <h5>{{ account.name }}</h5>
-    <h5>{{ account.github }}</h5>
-    <h5>{{ account.linkedin }}</h5>
-    <h5>{{ account.resume }}</h5>
+    <h3>{{ account.name }}</h3>
+    <h5 class="pt-2">
+      {{ account.github }}
+    </h5>
+    <h5 class="pt-2">
+      {{ account.linkedin }}
+    </h5>
+    <h5 class="pt-2">
+      {{ account.resume }}
+    </h5>
   </div>
 </template>
 <script>
@@ -24,3 +30,8 @@ export default {
   }
 }
 </script>
+<style>
+.btn{
+  border-radius: 50%;
+}
+</style>

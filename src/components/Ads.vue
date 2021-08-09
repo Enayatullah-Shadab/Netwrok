@@ -1,12 +1,18 @@
 <template>
   <div class="row">
-    <div class="col bg-dark text-light m-1 p-1">
+    <div class="col-12 text-white mb-2">
+      <p class="pt-2">
+        {{ ads.title }}
+      </p>
+      <a :href="'https://' + ads.linkURL">
+        <img class="pb-3 pl-3" :src="ads.square" height="180" alt="Adds Piece">
+      </a>
     </div>
   </div>
 </template>
 
 <script>
-
+import {} from '../assets/scss/main.scss'
 export default {
   props: {
     ads: {
@@ -15,13 +21,7 @@ export default {
     }
   },
   setup() {
-    return {
-
-    }
+    return {}
   }
 }
 </script>
-
-<style>
-
-</style>

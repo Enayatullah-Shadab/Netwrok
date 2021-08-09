@@ -1,5 +1,7 @@
 <template>
-  this will be called in postCard
+  <div class="row justify-content-center">
+    <PostCard v-for="p in post" :key="p.id" :post="p" />
+  </div>
 </template>
 <script>
 
