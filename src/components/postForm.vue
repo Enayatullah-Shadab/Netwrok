@@ -23,7 +23,7 @@
 <script>
 import { reactive } from '@vue/reactivity'
 import Pop from '../utils/Notifier'
-import { postsService } from '../services/PostService'
+import { postService } from '../services/PostService'
 export default {
   setup() {
     const state = reactive({
@@ -33,7 +33,7 @@ export default {
       state,
       async createPost() {
         try {
-          await postsService.createPost(state.newPost)
+          await postService.createPost(state.newPost)
           state.newPost = {}
         } catch (error) {
           Pop.toast(error, 'error')
