@@ -1,9 +1,13 @@
 <template>
   <div class="home container">
     <div class="d-flex flex-column align-items-center">
-      <h3 class="bg-primary text-light p-2 rounded d-flex">
-        <span class="text-center text-light m-2 p-1">Post will come here</span>
-      </h3>
+      <PostSearch />
+    </div>
+    <div v-if="account.id !== post.creatorId">
+      <PostForm />
+    </div>
+    <div class="row">
+      <PostsThread :post="post" />
     </div>
   </div>
 </template>

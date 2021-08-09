@@ -4,7 +4,7 @@
       <div class="myPro d-flex flex-row vw-100 ">
         <img
           alt=":)"
-          src="../assets/img/sha1.png"
+          src="../assets/img/sha1.jpg"
           height="45"
         />
         <h5>Welcome to Shadab Network</h5>

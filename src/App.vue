@@ -4,6 +4,7 @@
       <div class="col-3 ">
         <aside class="bg-info text-light text-center">
           <h3> Profile Login</h3>
+          <Post :ads="ads" :account="account" />
         </aside>
       </div>
       <div class="col-9">
@@ -36,15 +37,23 @@
 <script>
 import { computed, h, onMounted } from 'vue'
 import { AppState } from './AppState'
+import Pop from './utils/Notifier'
+import { adsService } from './services/AdsService'
+
 export default {
   name: 'App',
   setup() {
-    onMounted(() => {
-      // my method should be placed here
+    onMounted(async() => {
+      try {
+        await adsService.getAllPromotions()
+      } catch (error) {
+        Pop.toast(error, 'error')
+      }
     })
     return {
-      appState: computed(() => AppState)
-      // account and post also should be placed here
+      appState: computed(() => AppState),
+      Ads: computed(() => AppState.ads),
+      account: computed(() => AppState.account)
     }
   }
 }
