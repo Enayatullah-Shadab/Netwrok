@@ -9,7 +9,7 @@
 
 <script>
 import { reactive } from '@vue/reactivity'
-import { postsService } from '../services/PostService'
+import { postService } from '../services/PostService'
 export default {
   name: 'PostSearch',
   setup() {
@@ -20,7 +20,7 @@ export default {
       state,
       getPosts() {
         if (state.query !== '') {
-          postsService.getBySearch(state.query)
+          postService.getBySearch(state.query)
           state.query = ''
         }
       }

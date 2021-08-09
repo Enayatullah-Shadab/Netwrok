@@ -7,12 +7,12 @@
           name="body"
           v-model="state.newPost.body"
           class="form-control"
-          placeholder="Share Your Vue on things..."
+          placeholder="share your idea"
           required
         />
       </div>
       <div class="d-flex align-items-center">
-        <button type="submit" class="btn btn-outline-success">
+        <button type="submit" class="btn bg-primary mb-3 ">
           Post
         </button>
       </div>
@@ -43,3 +43,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.btn{
+  border-radius: 20px;
+}
+</style>

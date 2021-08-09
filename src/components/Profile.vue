@@ -1,6 +1,5 @@
 <template>
   <div class="profile m-1 p-1">
-    <!-- this is my profile -->
     <img class="rounded-circle" :src="account.picture" alt="profile image">
     <h5>{{ account.class }}</h5>
     <h5>{{ account.name }}</h5>
