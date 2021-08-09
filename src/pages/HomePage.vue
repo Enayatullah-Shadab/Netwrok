@@ -22,7 +22,7 @@ export default {
     onMounted(async() => {
       try {
         await postService.getAllPosts()
-        await postService.getPostById()
+        await postService.getPostByPage()
       } catch (error) {
         Pop.toast(error, 'error')
       }

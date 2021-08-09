@@ -9,6 +9,11 @@ class PostService {
     AppState.post = res.data.posts
   }
 
+  async getPostByPage() {
+    const res = await api.get('/api/posts')
+    AppState.postByPage = res.data
+  }
+
   async getBySearch(query) {
     const res = await api.get(`api/posts?query=${query}`)
     logger.log(res.data.posts)

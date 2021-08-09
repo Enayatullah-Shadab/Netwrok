@@ -1,9 +1,8 @@
 <template>
-  <div class="profle">
-    <p>Welcome {{ account.name }}</p>
-    <p> {{ account.email }}</p>
-    <p> {{ account.github }}</p>
-    <p> {{ account.linkedin }}</p>
+  <div class="account text-center">
+    <h1>Welcome {{ account.name }}</h1>
+    <img class="rounded" :src="account.picture" alt="" />
+    <p>{{ account.email }}</p>
   </div>
 </template>
 
@@ -11,7 +10,7 @@
 import { computed } from 'vue'
 import { AppState } from '../AppState'
 export default {
-  name: 'Shadab',
+  name: 'Account',
   setup() {
     return {
       account: computed(() => AppState.account)
@@ -19,9 +18,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-img {
-  max-width: 100px;
-}
-</style>

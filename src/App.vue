@@ -3,7 +3,7 @@
     <div class="row ">
       <div class="col-3 ">
         <aside class="bg-info text-light text-center">
-          <h3> Profile Login</h3>
+          <h3>Login</h3>
           <Post :ads="ads" :account="account" />
         </aside>
       </div>
@@ -15,7 +15,6 @@
         </div>
         <div class="row">
           <div class="col-9">
-            <h3> This is from App.vue file</h3>
             <router-view />
           </div>
           <div class="col-3 text-center">
@@ -45,7 +44,7 @@ export default {
   setup() {
     onMounted(async() => {
       try {
-        await adsService.getAllPromotions()
+        await adsService.getAllAds()
       } catch (error) {
         Pop.toast(error, 'error')
       }

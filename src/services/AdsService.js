@@ -3,7 +3,7 @@ import { AppState } from '../AppState.js'
 import { api } from './AxiosService'
 
 class AdsService {
-  async getAllPromotions() {
+  async getAllAds() {
     const res = await api.get('/api/ads')
     // logger.log(res.data)
     AppState.adds = res.data
